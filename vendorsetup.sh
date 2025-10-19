@@ -28,7 +28,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
     export OF_DONT_PATCH_ON_FRESH_INSTALLATION=1
     export OF_NO_RELOAD_AFTER_DECRYPTION=1
     export FOX_DISABLE_APP_MANAGER=1
-    export OF_MAINTAINER=EdWinT2
+    export OF_MAINTAINER=nino
     export FOX_VERSION=R14.1
     export FOX_BUILD_TYPE="Beta"
     export FOX_VARIANT=A14
@@ -38,7 +38,6 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
     export OF_STATUS_INDENT_RIGHT=80
     export OF_HIDE_NOTCH=1
     export OF_ALLOW_DISABLE_NAVBAR=0
-    export OF_FLASHLIGHT_ENABLE=0
 	export FOX_DYNAMIC_SAMSUNG_FIX=1
     export OF_CLASSIC_LEDS_FUNCTION=0
 	export OF_PATCH_AVB20=1
@@ -72,6 +71,8 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
     export OF_SKIP_DECRYPTED_ADOPTED_STORAGE=1
     export OF_FIX_DECRYPTION_ON_DATA_MEDIA=1
     export OF_UNBIND_SDCARD_F2FS=1
+    export OF_FLASHLIGHT_ENABLE=1
+    export OF_FL_PATH="/sys/devices/virtual/camera/flash/rear_flash"
 
 	# Let's see which are our build vars
     if [ -n "$FOX_BUILD_LOG_FILE" -a -f "$FOX_BUILD_LOG_FILE" ]; then
